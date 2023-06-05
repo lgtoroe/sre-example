@@ -18,6 +18,6 @@ sudo yum install git -y
 git clone https://github.com/kevinoid/postgresql-for-wordpress.git
 mv postgresql-for-wordpress/pg4wp /var/www/html/wp-content/pg4wp #Check this !
 cp /var/www/html/wp-content/pg4wp/db.php  /var/www/html/wp-content/
-# wget url-wpconfig/wp-config.php into /var/www/html/
-
+rm -rf var/www/html/wp-config.php
+wget https://raw.githubusercontent.com/lgtoroe/sre-example/main/terraform/wp-config.php /var/www/html/
 # Edit wp-config for PostgreSQL commandline
